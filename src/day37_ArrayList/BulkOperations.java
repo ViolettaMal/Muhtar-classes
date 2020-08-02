@@ -1,5 +1,7 @@
 package day37_ArrayList;
 
+import org.omg.PortableInterceptor.INACTIVE;
+
 import java.util.ArrayList;
 import java.util.Arrays;
 
@@ -34,6 +36,27 @@ public class BulkOperations {
         Integer [] arr = {10,20,4};
        boolean r3 = list2.containsAll(Arrays.asList(arr));
         System.out.println(r3);
+
+        System.out.println("=================");
+
+        ArrayList<Integer> nums = new ArrayList<>();
+        nums.addAll(Arrays.asList(1,1,2,2,3,4,5,5,6,7,8,9,10,11,12,13));
+
+        System.out.println(nums);
+        //remove all 1,2,5,10,11
+        nums.removeAll(Arrays.asList(1,2,5,10,11));
+        System.out.println(nums);
+
+        System.out.println("===============");
+        ArrayList<Integer> num1 = new ArrayList<>();
+        num1.addAll(Arrays.asList(1,1,2,2,3,3,3,4,4,5,5,6,6,7,7,8,8,9,9));
+        System.out.println(num1);
+
+        //only keep the elements that are either 1, or 2, or 3, or 9
+
+        num1.retainAll(Arrays.asList(1, 2, 3, 9));
+        System.out.println(num1);
+
 
     }
 }

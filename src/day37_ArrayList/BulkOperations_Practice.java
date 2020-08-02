@@ -42,6 +42,21 @@ public class BulkOperations_Practice {
         System.out.println(mentors);
         System.out.println(closeFriends);
 
+        System.out.println("===============");
+
+        ArrayList<String> employeeName = new ArrayList<>();
+        employeeName.addAll(Arrays.asList("Ahmed", "Muhtar","Ahmed", "Virginia", "Beslan", "Ahmed" ));
+        System.out.println(employeeName);
+
+     /*   // remove all Ahmeds from the list
+        employeeName.removeAll(Arrays.asList("Ahmed"));
+        System.out.println(employeeName);*/
+
+        // keep Ahmed only
+        employeeName.retainAll(Arrays.asList("Ahmed"));
+        System.out.println(employeeName);
+
+
 
 
 
