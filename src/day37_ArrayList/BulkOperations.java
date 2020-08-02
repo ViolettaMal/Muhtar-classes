@@ -1,6 +1,7 @@
 package day37_ArrayList;
 
 import java.util.ArrayList;
+import java.util.Arrays;
 
 public class BulkOperations {
     public static void main(String[] args) {
@@ -12,7 +13,27 @@ public class BulkOperations {
         list.add(4);
         list.add(5);
 
-        boolean r1 = list.contains(1);
+        boolean r1 = list.contains(1); //true
+
+        ArrayList<Integer> elements = new ArrayList<>();
+        elements.add(1);
+        elements.add(2);
+        elements.add(6);
+
+       boolean r2 = list.containsAll(elements);
+        System.out.println(r2);
+
+        System.out.println("=======================");
+        ArrayList<Integer> list2 = new ArrayList<>();
+        list2.add(1);
+        list2.add(2);
+        list2.add(3);
+        list2.add(4);
+        // verify that 1,2,4 are contained in the list2
+
+        Integer [] arr = {10,20,4};
+       boolean r3 = list2.containsAll(Arrays.asList(arr));
+        System.out.println(r3);
 
     }
 }
